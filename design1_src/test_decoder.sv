@@ -20,7 +20,7 @@ module test_decoder;
   );
 
   integer i;
-  
+
   always begin  // Clock wave
      #period  osc = ~osc;
   end
@@ -32,8 +32,9 @@ module test_decoder;
 
     for (i = 0; i < 16; i = i + 1) begin
       @(posedge clk) in = i;
+      $display("Input in = %0d, Output out = %0d", in, out);
     end
-    
+
     #(period * 16) $finish;
   end
   
