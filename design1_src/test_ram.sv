@@ -3,18 +3,16 @@
 `timescale 1 ns / 1 ps
 
 module test_ram;
-  parameter ADDR_WIDTH = 16;
-  parameter DATA_WIDTH = 8;
 
   reg clk;
   reg cs;
   reg we;
   reg oe;
-  reg [ADDR_WIDTH-1:0] addr;
-  wire [DATA_WIDTH-1:0] data;
-  reg [DATA_WIDTH-1:0] testbench_data;
+  reg [15:0] addr;
+  wire [7:0] data;
+  reg [7:0] testbench_data;
 
-  ram #(.ADDR_WIDTH(ADDR_WIDTH), .DATA_WIDTH(DATA_WIDTH)) u0 
+  ram #(.ADDR_WIDTH(16), .DATA_WIDTH(8)) test 
   (
     .clk(clk),
     .addr(addr),
@@ -41,6 +39,7 @@ module test_ram;
         cs <= 1; 
         oe <= 0; 
         testbench_data <= $random;
+        $display("Writing data %h to address %d", testbench_data, i);  // Show the write Operation (we = 1)
       end
     end
 
@@ -50,6 +49,7 @@ module test_ram;
         we <= 0;
         cs <= 1;
         oe <= 1;
+        $display("Reading data %h from address %d", data, i); // Show the read operation (we = 0)
       end
     end
 
