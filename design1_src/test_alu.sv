@@ -20,8 +20,12 @@ module alu_testbench;
         for (i = 0; i < 8; i = i + 1) begin
             #10;
 
-            // Display ALU_Out value after operation
-            $display("ALU_Out = %h for ALU_Sel = %h", ALU_Out, ALU_Sel);
+            // Display operation name, inputs, and ALU_Out value after operation
+            case (ALU_Sel)
+                4'h0: $display("Operation: ADD, A = %h, B = %h, ALU_Out = %h, CarryOut = %b", A, B, ALU_Out, CarryOut);
+                4'h1: $display("Operation: SUB, A = %h, B = %h, ALU_Out = %h, CarryOut = %b", A, B, ALU_Out, CarryOut);
+                // Add cases for other operations similarly
+            endcase
 
             // Increment ALU_Sel for the next operation
             ALU_Sel = ALU_Sel + 4'h1;

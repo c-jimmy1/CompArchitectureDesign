@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+
 module alu(
     input [15:0] A, B,
     input [3:0] ALU_Sel,
@@ -14,16 +15,18 @@ module alu(
 
     always @* begin
         case (ALU_Sel)
-            4'b0000: ALU_Result = A + B; // ADD
-            4'b0001: ALU_Result = A - B; // SUB
+            4'b0000: begin // ADD
+                ALU_Result = A + B;
+            end
+            4'b0001: begin // SUB
+                ALU_Result = A - B;
+            end
             4'b0010: ALU_Result = A & B; // AND
             4'b0011: ALU_Result = A | B; // OR
             4'b0100: ALU_Result = A ^ B; // XOR
             4'b0101: ALU_Result = ~A;    // NOT for A
             4'b0110: ALU_Result = ~B;    // NOT for B
-            4'b0111: ALU_Result = A << 1; // Shift Left A by 1
-            4'b1000: ALU_Result = A >> 1; // Shift Right A by 1
-            default: ALU_Result = A; // Default: Output A
+            default: ALU_Result = 16'h0000; // Default: Output zero
         endcase
     end
 
