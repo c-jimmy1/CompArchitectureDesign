@@ -1,3 +1,5 @@
+`timescale 1 ns / 1 ps
+
 module memory_access_register (
     input wire clk,
     input wire reset,
