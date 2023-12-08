@@ -26,7 +26,8 @@ module alu(
             4'b0100: ALU_Result = A ^ B; // XOR
             4'b0101: ALU_Result = ~A;    // NOT for A
             4'b0110: ALU_Result = ~B;    // NOT for B
-            default: ALU_Result = 16'h0000; // Default: Output zero
+            4'b0111: ALU_Result = 0;     // Clear
+            default: ALU_Result = A; // Default: A
         endcase
     end
 
