@@ -52,7 +52,7 @@ module test_cpu;
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars;
-    // Fibonacci 11 program
+    // Fibonacci 11 program with direct addressing
     @(posedge clk) MAR <= 'h0000100; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h10000005;
     @(posedge clk) MAR <= 'h0000102; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h10000006;
     @(posedge clk) MAR <= 'h0000104; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h10110007;
