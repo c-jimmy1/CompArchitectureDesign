@@ -13,7 +13,7 @@ module test_alu;
 
     initial begin
         $dumpfile("dump.vcd");
-        $dumpvars(1, alu_testbench);
+        $dumpvars(1, test_alu);
         A = 16'hFA;
         B = 16'h02;
         ALU_Sel = 4'h0;
