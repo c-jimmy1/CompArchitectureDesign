@@ -1,5 +1,3 @@
-// Code your testbench here
-// or browse Examples
 `timescale 1 ns / 1 ps
 
 module test_ram;
