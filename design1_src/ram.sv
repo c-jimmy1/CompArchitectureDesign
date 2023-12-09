@@ -1,4 +1,3 @@
-// Code your design here
 `timescale 1 ns / 1 ps
 
 module single_port_sync_ram
