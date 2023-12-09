@@ -109,7 +109,7 @@ module test_cpu;
         4'b1001: begin //jump
               @(posedge clk) PC <= IR[11:0];
         end
-        4'b1010: begin ///shift
+        4'b1010: begin 
           @(posedge clk) AC <= 0;
         end
           
