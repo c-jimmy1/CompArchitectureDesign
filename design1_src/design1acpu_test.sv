@@ -66,13 +66,18 @@ module test_cpu;
     @(posedge clk) MAR <= 'h0000114; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h11004000;
     @(posedge clk) MAR <= 'h0000116; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h10000000;
     @(posedge clk) MAR <= 'h0000118; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h10010000;
-    @(posedge clk) MAR <= 'h000011A; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00000000;
-    @(posedge clk) MAR <= 'h000011C; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00000001;
-    @(posedge clk) MAR <= 'h000011E; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00000000;
-    @(posedge clk) MAR <= 'h0000120; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h0000000A;
-    @(posedge clk) MAR <= 'h0000122; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'hFFFF00FF;
+    @(posedge clk) MAR <= 'h000011A; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h0000124;
+    @(posedge clk) MAR <= 'h000011C; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h0000126;
+    @(posedge clk) MAR <= 'h000011E; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h0000128;
+    @(posedge clk) MAR <= 'h0000120; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h000012A;
+    @(posedge clk) MAR <= 'h0000122; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h000012C;
 
-    
+    @(posedge clk) MAR <= 'h0000124; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00000000;
+    @(posedge clk) MAR <= 'h0000126; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00000001;
+    @(posedge clk) MAR <= 'h0000128; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00000000;
+    @(posedge clk) MAR <= 'h000012A; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h00001010;
+    @(posedge clk) MAR <= 'h000012C; we <= 1; cs <= 1; oe <= 0; testbench_data <= 'h11111111;
+
     @(posedge clk) PC <= 'h0000100;
 
     for (i = 0; i < 62; i = i+1) begin
