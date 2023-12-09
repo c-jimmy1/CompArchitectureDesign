@@ -12,7 +12,7 @@ module test_ram;
   wire [7:0] data;
   reg [7:0] testbench_data;
 
-  ram #(.ADDR_WIDTH(16), .DATA_WIDTH(8)) test 
+  single_port_sync_ram #(.ADDR_WIDTH(16), .DATA_WIDTH(8)) test 
   (
     .clk(clk),
     .addr(addr),
