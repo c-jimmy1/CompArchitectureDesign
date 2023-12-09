@@ -1,0 +1,16 @@
+\babel@toc {british}{}\relax 
+\contentsline {section}{\numberline {1}Requirements}{2}{section.1}%
+\contentsline {subsubsection}{\numberline {1.0.1}Components Needed}{2}{subsubsection.1.0.1}%
+\contentsline {section}{\numberline {2}Design 1}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Instruction Set Architecture}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Components}{3}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}ALU}{3}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Decoder}{7}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Ram}{11}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Large Ram}{16}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}CPU}{19}{subsubsection.2.2.5}%
+\contentsline {section}{\numberline {3}Design 1a}{23}{section.3}%
+\contentsline {section}{\numberline {4}Design 1b}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Data Cache Implementation}{26}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Testbench}{28}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Fibonacci F11}{28}{subsection.5.1}%
