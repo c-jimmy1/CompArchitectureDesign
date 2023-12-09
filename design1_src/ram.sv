@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module ram
+module single_port_sync_ram
   # (parameter ADDR_WIDTH = 16,
      parameter DATA_WIDTH = 8,
      parameter LENGTH = (1<<ADDR_WIDTH)
@@ -29,7 +29,7 @@ module ram
       tmp_data <= mem[addr];
   end
 
-  assign data = cs & oe & !we ? tmp_data : 'hz; //changed from hz
+  assign data = cs & oe & !we ? tmp_data : 'bz; //changed from hz to bz
 
 
 endmodule
